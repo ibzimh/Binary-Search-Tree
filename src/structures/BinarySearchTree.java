@@ -9,7 +9,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	protected BSTNode<T> root;
 	int size = 0;
 
-	//SELF MADE:
 	public boolean isLeafNode(BSTNode<T> node) {
 		return (boolean)(node.getRight() == null && node.getLeft() == null);
 	}
@@ -27,14 +26,11 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public int getSize() {
-		// TODO
 		return size;
 	}
 
 	public boolean contains(T t) {
-		// TODO
 		if (t == null) {throw new NullPointerException();}
-
 		return (boolean)(containsHelper(t, root) != null);
 	}
 
@@ -58,7 +54,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public boolean removeElement(T t) {
-		// TODO
 
 		if (t == null) {throw new NullPointerException();}
 
@@ -139,7 +134,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public T getLowestValueFromSubtree(BSTNode<T> node) {
-		// TODO
 		if (node.getLeft() == null) {
 			return node.getData();
 		} else {
@@ -162,7 +156,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public BSTNode<T> removeLeftmostFromSubtree(BSTNode<T> node) {
-		// TODO
 		if (node.getLeft() == null) {
 			return node.getRight();
 		} else {
@@ -176,7 +169,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public T getElement(T t) {
-		// TODO
 		if (t == null) {
 			throw new NullPointerException();
 		}
@@ -204,7 +196,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public void addElement(T t) {
-		// TODO
 
 		if (t == null) {throw new NullPointerException();}
 
@@ -246,7 +237,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public T getMin() {
-		// TODO
 		if (isEmpty()) {return null;}
 		return inorderIterator().next();
 	}
@@ -254,7 +244,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public T getMax() {
-		// TODO
 		if (isEmpty()) {return null;}
 		else {
 			return getMaxHelper(root).getData();
@@ -272,7 +261,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public int height() {
-		// TODO
 		return helperHeight(root);
 	}
 
@@ -290,7 +278,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public Iterator<T> preorderIterator() {
-		// TODO
 		Queue<T> queue = new LinkedList<T>();
 		preorderTraverse(queue, root);
 		return queue.iterator();
@@ -320,7 +307,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	}
 
 	public Iterator<T> postorderIterator() {
-		// TODO
 		Queue<T> queue = new LinkedList<T>();
 		postorderTraverse(queue, root);
 		return queue.iterator();
@@ -336,7 +322,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public boolean equals(BSTInterface<T> other) {
-		// TODO
 
 		if (other == null) {
 			throw new NullPointerException();
@@ -377,7 +362,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 
 	@Override
 	public boolean sameValues(BSTInterface<T> other) {
-		// TODO
 
 		if (other == null) {
 			throw new NullPointerException();
@@ -400,7 +384,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements
 	
 	@Override
 	public int countRange(T min, T max) {
-    	// TODO
 		int count = 0;
 		Iterator<T> iter = inorderIterator();
 		T elem;

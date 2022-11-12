@@ -1,15 +1,5 @@
 package structures;
 
-/**
- * A node in a BST.
- * 
- * Note that BSTNode MUST implement BSTNodeInterface; removing this will resulit
- * in your program failing to compile for the autograder.
- * 
- * @author liberato
- *
- * @param <T>
- */
 public class BSTNode<T extends Comparable<T>> implements BSTNodeInterface<T> {
 	private T data;
 	private BSTNode<T> left;
